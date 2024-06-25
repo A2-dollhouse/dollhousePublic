@@ -41,7 +41,7 @@
 * ``Unity 2022.3.17f (LTS)``
 * ``Visual Studio 2022``
 * ``.Net 8.0``
-* ``CC0 에셋 사용``
+* ``Dungeon - Low Poly Toon Battle Arena Version 1.1（current)``
 
 <br/><br/>
  
@@ -87,3 +87,5 @@
 게임 시작 후 1초 뒤에 게임의 설명이 나타나는 창이 보입니다. 게임 설명, 이동 방법, 주의사항 순으로 표시됩니다.
 
 창을 넘길 때는 ``E`` 키를 사용합니다.
+
+<br/> <br/>
