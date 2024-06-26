@@ -4,15 +4,14 @@ using UnityEngine.Audio;
 public enum PlayerSfxSound
 {
     Step = 0,
-    Die,
-    Hit
+    KeyGet,
+    KeyAll,
+    KeyOpen
 }
 
 public enum MonsterSfxSound
 {
-    Step = 0,
-    Die,
-    Hit
+    Step = 0
 }
 
 public class SoundManager : Singleton<SoundManager>
@@ -54,12 +53,19 @@ public class SoundManager : Singleton<SoundManager>
         {
             if (sfxSound == PlayerSfxSound.Step)
             {
-                int randomIndex = Random.Range(0, playerStepSfxClips.Length);
-                sfxSource.PlayOneShot(playerStepSfxClips[randomIndex]);
+                if (playerStepSfxClips.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, playerStepSfxClips.Length);
+                    sfxSource.PlayOneShot(playerStepSfxClips[randomIndex]);
+                }
             }
             else
             {
-                sfxSource.PlayOneShot(monsterSfxClips[(int)sfxSound]);
+                int index = (int)sfxSound;
+                if (index < playerSfxClips.Length)
+                {
+                    sfxSource.PlayOneShot(playerSfxClips[index]);
+                }
             }
         }
     }
@@ -70,12 +76,19 @@ public class SoundManager : Singleton<SoundManager>
         {
             if (sfxSound == MonsterSfxSound.Step)
             {
-                int randomIndex = Random.Range(0, monsterStepSfxClips.Length);
-                sfxSource.PlayOneShot(monsterStepSfxClips[randomIndex]);
+                if (monsterStepSfxClips.Length > 0)
+                {
+                    int randomIndex = Random.Range(0, monsterStepSfxClips.Length);
+                    sfxSource.PlayOneShot(monsterStepSfxClips[randomIndex]);
+                }
             }
             else
             {
-                sfxSource.PlayOneShot(monsterSfxClips[(int)sfxSound]);
+                int index = (int)sfxSound;
+                if (index < monsterSfxClips.Length)
+                {
+                    sfxSource.PlayOneShot(monsterSfxClips[index]);
+                }
             }
         }
     }

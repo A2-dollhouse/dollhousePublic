@@ -11,19 +11,21 @@ public class OnTriggerCheck : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                GameManager.Instance.GetKey();
-                GameManager.Instance.keyUI.SetActive(false);
+                SpawnManager._instance.GetKey();
+                SpawnManager._instance.keyUI.SetActive(false);
                 Destroy(other.gameObject);
             }
         }
 
         if (other.gameObject.CompareTag("Dool"))
         {
-            if (GameManager.Instance.GetKeyCheck() && Input.GetKeyDown(KeyCode.E))
+            if (SpawnManager._instance.GetKeyCheck())
             {
-                Debug.Log("¹®¿­¸²~");
-                GameManager.Instance.DoolOpen();
-                GameManager.Instance.keyUI.SetActive(false);
+                if (Input.GetKey(KeyCode.E))
+                {
+                    SpawnManager._instance.DoolOpen();
+                    SpawnManager._instance.keyUI.SetActive(false);
+                }
             }
         }
     }
@@ -32,12 +34,12 @@ public class OnTriggerCheck : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Key"))
         {
-            GameManager.Instance.keyUI.SetActive(true);
+            SpawnManager._instance.keyUI.SetActive(true);
         }
 
-        if (other.gameObject.CompareTag("Dool") && GameManager.Instance.GetKeyCheck())
+        if (other.gameObject.CompareTag("Dool") && SpawnManager._instance.GetKeyCheck())
         {
-            GameManager.Instance.keyUI.SetActive(true);
+            SpawnManager._instance.keyUI.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -45,12 +47,12 @@ public class OnTriggerCheck : MonoBehaviour
         if (other.gameObject.CompareTag("Key"))
         {
             Debug.Log("asdf");
-            GameManager.Instance.keyUI.SetActive(false);
+            SpawnManager._instance.keyUI.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("Dool") && GameManager.Instance.GetKeyCheck())
+        if (other.gameObject.CompareTag("Dool") && SpawnManager._instance.GetKeyCheck())
         {
-            GameManager.Instance.keyUI.SetActive(false);
+            SpawnManager._instance.keyUI.SetActive(false);
         }
     }
 }

@@ -11,7 +11,7 @@ public class ExitPortal : MonoBehaviour
         if (portal.gameObject.CompareTag("Portal") && isfirst)
         {
             Vector3 portalPos = portal.transform.position;
-            GameManager.Instance.Portal(portalPos, this.gameObject);
+            SpawnManager._instance.Portal(portalPos, this.gameObject);
             isfirst = false;
         }
     }
