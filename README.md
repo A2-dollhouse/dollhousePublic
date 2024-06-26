@@ -15,7 +15,7 @@
 [👉팀 노션으로 이동](https://www.notion.so/teamsparta/d93c963485174f189cc2b2345d402b4b)
 <br/><br/>
 
-[➡️게임 플레이하기](https://drive.google.com/file/d/1lZJOKxe-ppCAibpUq9_XmOxdd7DhxtGE/view)
+[➡️게임 플레이하기](https://drive.google.com/file/d/1eSon-xWuU9-S-hPNVoUB1PYxl4eyykr5/view)
 
 <br/><br/>
 
